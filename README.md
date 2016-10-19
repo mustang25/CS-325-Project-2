@@ -1,5 +1,5 @@
 # CS-325-Project-2
-# CS325 Analysis of Algorithms - Project 2 - Coin Change
+# Analysis of Algorithms - Project 2 - Coin Change
 ## Group Members
 
 - Tim Bramlett
