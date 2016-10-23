@@ -26,6 +26,8 @@ def changegreedy(v, a):
     return answer_list, min_num_coins
 
 
-print(changegreedy([1,2,4,8],15))
-print(changegreedy([1,3,7,12],29))
-print(changegreedy([1,3,7,12],31))
+if __name__ == '__main__':
+    # basic tests from assignment pdf
+    print(changegreedy([1,2,4,8],15))
+    print(changegreedy([1,3,7,12],29))
+    print(changegreedy([1,3,7,12],31))
