@@ -2,7 +2,7 @@
 #algo 1
 from algo1_brute_force import changeslow
 #algo 2
-
+from algo2_change_greedy import changegreedy
 #algo 3
 
 
@@ -46,7 +46,11 @@ for i in range(0, len(input_list), 2):
     write_results(results)
 text_output.write("\n")
 
-
+text_output.write("Algorithm changegreedy:\n")
+for i in range(0, len(input_list), 2): 
+    results = changegreedy(input_list[i], input_list[i + 1][0])
+    write_results(results)
+text_output.write("\n")
 
 text_output.close()
 
