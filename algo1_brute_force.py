@@ -16,24 +16,3 @@ def changeslow(array, amount):
 			answer_array[i] = single_coin_count
 
 	return answer_array, coin_count
-
-#main
-amount = int(input('Input integer for amount to test the algorithm: '))
-
-array = [1, 3, 7, 26]	# test array with 22 amount
-
-result = changeslow(array, amount)
-
-print(result[0], '\n', result[1])
-
-# expected output in file: Algorithm changeslow:
-
-#[1, 2, 5]
-#10
-#[1, 3, 7, 26]
-#22
-#Answers
-#[0, 0, 2]
-#2
-#[1, 0, 3, 0]
-#4
