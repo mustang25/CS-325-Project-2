@@ -1,5 +1,12 @@
 #!/usr/bin/env python3
 
+"""Algorithm that uses dynamic programming to determine the least amount of coins needed to make change.
+
+The following sources were used while developing the algorithm:
+http://interactivepython.org/runestone/static/pythonds/Recursion/DynamicProgramming.html
+https://www.youtube.com/watch?v=rdI94aW6IWw
+"""
+
 
 def changedp(denominations, amount):
     """An algorithm that calculates the least amount of coins needed to create the change amount.
