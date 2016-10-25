@@ -2,12 +2,10 @@
 #John Blakey
 
 def changeslow(array, amount):
-	array_size = len(array) - 1
 	coin_count = 0
 	answer_array = [0] * len(array)
 
-	for i in range(array_size, -1, -1):
-		answer_array[i] = 0
+	for i in range(len(array) - 1, -1, -1):
 		single_coin_count = amount // array[i]
 
 		if single_coin_count > 0 and amount > 0:
