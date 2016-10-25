@@ -3,6 +3,7 @@
 from algo1_brute_force import changeslow
 #algo 2
 from algo2_change_greedy import changegreedy
+from algo3_changedp import changedp
 #algo 3
 #from <algo3 filename import changedp
 
@@ -47,16 +48,17 @@ for i in range(0, len(input_list), 2):
 text_output.write("\n")
 
 text_output.write("Algorithm changegreedy:\n")
-for i in range(0, len(input_list), 2): 
+for i in range(0, len(input_list), 2):
     results = changegreedy(input_list[i], input_list[i + 1][0])
     write_results(results)
 text_output.write("\n")
 
 text_output.write("Algorithm changedp:\n")
-#for i in range(0, len(input_list), 2): 
-    #results = changedp(input_list[i], input_list[i + 1][0])
-    #write_results(results)
+for i in range(0, len(input_list), 2):
+    results = changedp(input_list[i], input_list[i + 1][0])
+    write_results(results)
 text_output.write("\n")
+
 
 
 text_output.close()

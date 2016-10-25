@@ -9,16 +9,17 @@ def changegreedy(v, a):
     """
 
     change_to_make = a
-    answer_list = [0] * len(v)
+    working_list = v[:]
+    answer_list = [0] * len(working_list)
 
     while change_to_make > 0:
-        maxn = max(v)
-        position = v.index(maxn)
+        maxn = max(working_list)
+        position = working_list.index(maxn)
         if (change_to_make - maxn) >= 0:
             change_to_make -= maxn
             answer_list[position] += 1
         else:
-            v.pop()
+            working_list.pop()
 
     min_num_coins = [i for i in answer_list if i != 0]
     min_num_coins = sum(min_num_coins)

@@ -4,7 +4,7 @@ from algo3_changedp import changedp
 
 
 with open('array_timing.txt', 'w') as file_out:
-    test_array = list(range(10000, 10010 + 1))
+    test_array = list(range(10000, 10200 + 1))
     coins = [1, 5, 10, 25, 50]
     file_out.write("Timing Question 3\n")
     for change in test_array:
