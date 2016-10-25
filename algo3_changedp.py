@@ -60,3 +60,4 @@ if __name__ == '__main__':
     print(changedp([1, 3, 7, 12], 29))
     print(changedp([1, 3, 7, 12], 31))
     print(changedp([3, 4, 5], 3))
+    print(changedp([1, 3, 7, 26], 22))
