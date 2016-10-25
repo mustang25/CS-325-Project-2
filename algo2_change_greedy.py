@@ -26,8 +26,55 @@ def changegreedy(v, a):
     return answer_list, min_num_coins
 
 
+def question_3():
+
+
+    list_of_a = list(range(2010, 2205, 5))
+
+    for a in list_of_a:
+        v = [1, 5, 10, 25, 50]
+        answer_list, min_num_coins = changegreedy(v, a)
+        print("{}\t{}".format(a, min_num_coins))
+
+def question_4():
+
+
+    list_of_a = list(range(2000, 2201, 1))
+    v1 = [1, 2, 6, 12, 24, 48, 60]
+    v2 = [1, 6, 13, 37, 150]
+
+    for a in list_of_a:
+
+        vc1 = list(v1)
+        vc2 = list(v2)
+
+        answer_list, min_num_coins1 = changegreedy(vc1, a)
+        answer_list, min_num_coins2 = changegreedy(vc2, a)
+        print("{}\t{}\t{}".format(a, min_num_coins1, min_num_coins2))
+
+def question_5():
+
+
+    list_of_a = list(range(2000, 2201, 1))
+
+    for a in list_of_a:
+        v = list(range(0, 31, 2))
+        v[0] = 1
+
+        answer_list, min_num_coins = changegreedy(v, a)
+        print("{}\t{}".format(a, min_num_coins))
+
+
+
 if __name__ == '__main__':
     # basic tests from assignment pdf
     print(changegreedy([1,2,4,8],15))
     print(changegreedy([1,3,7,12],29))
     print(changegreedy([1,3,7,12],31))
+
+    #question_3()
+    # question_4()
+    question_5()
+
+
+
