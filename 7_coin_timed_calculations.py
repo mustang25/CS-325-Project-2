@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 import time
-from algo3_changedp import changegreedy
+from algo3_changedp import changedp
 
 
 with open('coin_timing.txt', 'w') as file_out:
@@ -10,6 +10,6 @@ with open('coin_timing.txt', 'w') as file_out:
         change = 10000
         coins = list(range(1, i))
         start_time = time.time()
-        result = changegreedy(coins, change)
+        result = changedp(coins, change)
         execution_time = time.time() - start_time
         file_out.write("{} {}\n".format(len(coins), execution_time))

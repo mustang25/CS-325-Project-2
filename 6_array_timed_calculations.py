@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import time
 from algo2_change_greedy import changegreedy
-from algo3_changedp import changegreedy
+from algo3_changedp import changedp
 
 
 
