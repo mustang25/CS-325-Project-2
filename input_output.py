@@ -51,9 +51,13 @@ with open(input_name, 'r') as text_input:
 # are then written to a file called "Outputchange.txt".
 
 text_output.write("Algorithm changeslow:\n")
-for i in range(0, len(input_list), 2): 
-    results = changeslow(input_list[i], input_list[i + 1][0])
-    write_results(results)
+for i in range(0, len(input_list), 2):
+    if input_list[i + 1][0] > 37:
+        results = "Change value too large to calculate changeslow, the calculation was not performed."
+        text_output.write(results + '\n')
+    else:
+        results = changeslow(input_list[i], input_list[i + 1][0])
+        write_results(results)
 text_output.write("\n")
 
 text_output.write("Algorithm changegreedy:\n")
