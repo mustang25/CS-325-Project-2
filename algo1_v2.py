@@ -39,6 +39,4 @@ def compute(source_list, value):
         return temp_answer
     
 
-#coins = [1, 3, 7, 12]
-
-#print (changeslow(coins, 29))
+#print (changeslow([1, 3, 7, 12], 29))
