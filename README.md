@@ -9,7 +9,7 @@
 ## How to Run
 
 Go to the directory with the unzipped files:
-- algo1_brute_force.py
+- algo1_v2.py
 - algo2_change_greedy.py
 - algo3_changedp.py
 - input_output.py
