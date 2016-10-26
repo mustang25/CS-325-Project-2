@@ -8,7 +8,7 @@ https://www.youtube.com/watch?v=rdI94aW6IWw
 """
 
 
-def changedp(denominations, amount):
+def changegreedy(denominations, amount):
     """An algorithm that calculates the least amount of coins needed to create the change amount.
 
     Argument:
@@ -56,8 +56,8 @@ def changedp(denominations, amount):
 
 
 if __name__ == '__main__':
-    print(changedp([1, 2, 4, 8], 15))
-    print(changedp([1, 3, 7, 12], 29))
-    print(changedp([1, 3, 7, 12], 31))
-    print(changedp([3, 4, 5], 3))
-    print(changedp([1, 3, 7, 26], 22))
+    print(changegreedy([1, 2, 4, 8], 15))
+    print(changegreedy([1, 3, 7, 12], 29))
+    print(changegreedy([1, 3, 7, 12], 31))
+    print(changegreedy([3, 4, 5], 3))
+    print(changegreedy([1, 3, 7, 26], 22))
