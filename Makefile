@@ -1,2 +1,2 @@
 run:
-    python3 input_output.py $(FILE)
+	python3 input_output.py $(FILE)
