@@ -9,9 +9,12 @@
 ## How to Run
 
 Go to the directory with the unzipped files:
-- < filename >
-- < filename >
+- algo1_brute_force.py
+- algo2_change_greedy.py
+- algo3_changedp.py
+- input_output.py
+- a .txt that contains denominations and change amounts
 
-Terminal input `python3 < filename >`
+Terminal input `python3 input_output.py <filename>`
 
-Upon program completion the results are output to '< filename >'
+Upon program completion the results are output to '<filenamechange.txt>'
