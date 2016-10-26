@@ -17,4 +17,4 @@ Go to the directory with the unzipped files:
 
 Terminal input `python3 input_output.py <filename>`
 
-Upon program completion the results are output to '<filenamechange.txt>'
+Upon program completion the results are output to `<filenamechange.txt>`
