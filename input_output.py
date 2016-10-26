@@ -29,7 +29,6 @@ def write_results(r):
     text_output.writelines(str(r[0]) + '\n')
     text_output.write(str(r[1]) + '\n')
 
-print(input_name)
 # This is currently set to open the text file given to us and read each line into an array that is
 # stored in input_list. This input_list array has alternating elements of "answer" array and count
 # integer 
