@@ -16,6 +16,7 @@ Go to the directory with the unzipped files:
 - a .txt that contains denominations and change amounts
 
 Terminal input `python3 input_output.py <filename>`
-Terminal input with Makefile `make run FILE=filename`
+
+Terminal input with Makefile `make run FILE=<filename>`
 
 Upon program completion the results are output to `<filenamechange.txt>`
