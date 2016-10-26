@@ -1,39 +1,52 @@
 #!/usr/bin/env python3
 #John Blakey
 
-def changeslow(array, amount):
-	array_size = len(array) - 1
-	coin_count = 0
-	answer_array = [0] * len(array)
+#Implementation of the second variation of the divide and conquer method 
+#described in project 2 
 
-	for i in range(array_size, -1, -1):
-		answer_array[i] = 0
-		single_coin_count = amount // array[i]
+def changeslow(source_list, value):
+	answer_list = [0] * len(source_list)
+		
+	return changeslowHelper(source_list, value, answer_list)
+    
 
-		if single_coin_count > 0 and amount > 0:
-			coin_count += single_coin_count
-			amount -= single_coin_count * array[i]
-			answer_array[i] = single_coin_count
+def changeslowHelper(source_list, value, answer_list):
+	if value == 0:
+		#Base case: return value = 0 
+		return coins, value, answer_list
 
-	return answer_array, coin_count
+	result = value
 
-#main
-amount = int(input('Input integer for amount to test the algorithm: '))
+	#Start with the first coin and recursively call changeslowHelper to find minimum
+	#iterate thourgh all the coin values
+	for i in range(0, len(coins)):
 
-array = [1, 3, 7, 26]	# test array with 22 amount
+		#Hold temporary values for answer_list
+		temp_list = answer_list[:]
 
-result = changeslow(array, amount)
+		if coins[i] <= value:
+			#Increment the coin location in the answer_array by one
+			temp_list[i] += 1
+			print('temp_list after adding one', temp_list)
+			temp_result = changeslowHelper(coins, value - coins[i], answer_list)
+			
+			#Test for best results, temp_result[1] is value
+			if temp_result[1] + 1 < result:
+				result = temp_result[1] + 1
+				#Copy values of temp_list to answer_list for current best result
+				answer_list = temp_list[:]
+				print('answer_list after adding one', answer_list)
 
-print(result[0], '\n', result[1])
+	return coins, result, answer_list
 
-# expected output in file: Algorithm changeslow:
+#main test
 
-#[1, 2, 5]
-#10
-#[1, 3, 7, 26]
-#22
-#Answers
-#[0, 0, 2]
-#2
-#[1, 0, 3, 0]
-#4
+coins = [1, 3, 7, 12]
+#coins = [2, 3]
+
+
+answer = changeslow(coins, 29)
+
+print (answer[2], answer[1])
+
+#Expected result = [0, 1, 2, 1] 4
