@@ -13,22 +13,22 @@ def changeslow(source_list, value):
 def changeslowHelper(source_list, value, answer_list):
 	if value == 0:
 		#Base case: return value = 0 
-		return coins, value, answer_list
+		return source_list, value, answer_list
 
 	result = value
 
 	#Start with the first coin and recursively call changeslowHelper to find minimum
 	#iterate thourgh all the coin values
-	for i in range(0, len(coins)):
+	for i in range(0, len(source_list)):
 
 		#Hold temporary values for answer_list
 		temp_list = answer_list[:]
 
-		if coins[i] <= value:
+		if source_list[i] <= value:
 			#Increment the coin location in the answer_array by one
 			temp_list[i] += 1
 			print('temp_list after adding one', temp_list)
-			temp_result = changeslowHelper(coins, value - coins[i], answer_list)
+			temp_result = changeslowHelper(source_list, value - source_list[i], temp_list)
 			
 			#Test for best results, temp_result[1] is value
 			if temp_result[1] + 1 < result:
@@ -37,7 +37,7 @@ def changeslowHelper(source_list, value, answer_list):
 				answer_list = temp_list[:]
 				print('answer_list after adding one', answer_list)
 
-	return coins, result, answer_list
+	return source_list, result, answer_list
 
 #main test
 
