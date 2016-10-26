@@ -1,14 +1,23 @@
 #!/usr/bin/env python3
-#algo 1
+import sys
+import re
+# algo 1
 from algo1_brute_force import changeslow
-#algo 2
+# algo 2
 from algo2_change_greedy import changegreedy
+# algo 3
 from algo3_changedp import changedp
-#algo 3
-#from <algo3 filename import changedp
+
 
 input_list = []
-text_output = open('OutputChange.txt', 'w')
+
+if len(sys.argv) > 1:
+    input_name = sys.argv[1]
+    output_name = re.search(r'^\w+', input_name).group(0) + "change.txt"
+    text_output = open(output_name, 'w')
+else:
+    input_name = 'Amount.txt'
+    text_output = open('OutputChange.txt', 'w')
 
 
 def write_results(r):
@@ -20,12 +29,14 @@ def write_results(r):
     text_output.writelines(str(r[0]) + '\n')
     text_output.write(str(r[1]) + '\n')
 
-
+print(input_name)
 # This is currently set to open the text file given to us and read each line into an array that is
 # stored in input_list. This input_list array has alternating elements of "answer" array and count
 # integer 
-with open('Amount.txt', 'r') as text_input:
+with open(input_name, 'r') as text_input:
     for line in text_input:
+        if line == '' or line == '\n':
+            continue
         if line[0] == '[':
             line = line.strip('[\n').replace(',', '').replace(']', '')
 
@@ -34,9 +45,8 @@ with open('Amount.txt', 'r') as text_input:
             input_list.append(array)
 
         elif line != '' and line is not None and line != '[':
-            amount = int(n)
+            amount = int(line)
             input_list.append(amount)
-            print(amount)
 
 # This iterates over the above array that we are testing and calls the appropriate function. The results
 # are then written to a file called "Outputchange.txt".
@@ -59,7 +69,4 @@ for i in range(0, len(input_list), 2):
     write_results(results)
 text_output.write("\n")
 
-
-
 text_output.close()
-
