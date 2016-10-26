@@ -2,7 +2,7 @@
 import sys
 import re
 # algo 1
-from algo1_brute_force import changeslow
+from algo1_v2 import changeslow
 # algo 2
 from algo2_change_greedy import changegreedy
 # algo 3
